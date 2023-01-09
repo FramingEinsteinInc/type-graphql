@@ -1,5 +1,5 @@
 {
-  "name": "type-graphql",
+  "name": "@framingeinsteininc/type-graphql",
   "version": "0.0.0-unreleased",
   "author": {
     "name": "Michał Lytek",
@@ -16,6 +16,7 @@
     "lint": "echo TODO: add ESLint",
     "verify": "npm run check && npm run lint",
     "package": "gulp package",
+    "publish": "gulp npmPublish",
     "docs": "npm run --prefix website start"
   },
   "peerDependencies": {

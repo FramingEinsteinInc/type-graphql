@@ -109,6 +109,14 @@ export class Gulpfile {
       .pipe(gulp.dest("./build/package"));
   }
 
+  @Task()
+  packagePrepareNPMRCFile() {
+    return gulp
+      .src("./.npmrc")
+      .pipe(gulp.dest("./build/package"));
+  }
+
+
   /**
    * This task will replace all typescript code blocks in the README
    * (since npm does not support typescript syntax highlighting)
@@ -133,7 +141,7 @@ export class Gulpfile {
       "packageBrowserShim",
       // "packageMoveCompiledFiles",
       // "packageClearCompileDirectory",
-      ["packagePreparePackageFile", "packageReadmeFile"],
+      ["packagePreparePackageFile", "packageReadmeFile" , "packagePrepareNPMRCFile"],
     ];
   }
 
